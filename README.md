@@ -8,11 +8,12 @@ Tarih: 1 Ekim 2026 · Durum: Gordion adı, multi-repo düzeni ve başlangıç te
 
 OpenAI ile doğal yazılı ve sesli iletişim kuran, kullanıcının açıkça yetkilendirdiği bilgisayar ve cihaz işlemlerini gerçekleştiren kişisel agent platformu. İleride ürünleştirilecek araçlar, satış sitesi ve portfolyo aynı ekosistemin parçaları olacak.
 
-Bu paket çalışır uygulama değildir. İlk geliştirme için incelemeye hazır kapsam ve karar önerileri içerir. Uygulama kodu yazılmadı, uygulama geliştirme bağımlılıkları kurulmadı ve OpenAI isteği gönderilmedi. Kullanıcının ek bağlantı talebi üzerine VS Code'a resmi Codex eklentisi kuruldu ve sürümü doğrulandı; IDE hesap girişi ayrıca tamamlanacak. Temel/dokümantasyon repository'si `main` branch'inde hazırlanmış ve [kemalselimkoc/gordion-foundation](https://github.com/kemalselimkoc/gordion-foundation) GitHub repository'sine bağlanmıştır.
+Bu paket çalışır uygulama değildir. İlk geliştirme için kapsam ve kararları içerir. Node.js/npm ve .NET SDK kuruldu; TypeScript ve C# derleme kontrolleri geçti. Ürün kodu yazılmadı ve OpenAI isteği gönderilmedi. VS Code'a resmi Codex eklentisi kuruldu ve sürümü doğrulandı; IDE hesap girişi ayrıca tamamlanacak. Temel/dokümantasyon repository'si `main` branch'inde hazırlanmış ve [kemalselimkoc/gordion-foundation](https://github.com/kemalselimkoc/gordion-foundation) GitHub repository'sine bağlanmıştır.
 
 ## Belgeler
 
 - [Ortam kontrolü](docs/environment.md): ölçülen durum, doğrulanamayan noktalar ve kurulum sırası.
+- [Geliştirme ortamını kullanma](docs/development-setup.md): kurulu araçlar ve tek terminal başlatıcısı.
 - [Ana mimari](docs/architecture.md): uzun vadeli sınırlar ve MVP akışı.
 - [Güvenlik taslağı](docs/security.md): yetki, pairing, approval, secrets ve tehditler.
 - [MVP yol haritası](docs/roadmap.md): aşamalar ve geçiş kriterleri.
@@ -40,4 +41,4 @@ Gerçek zamanlı ses, wake word, kalıcı hafıza, uzaktan erişim, cloud, iPhon
 
 ## Devam için gereken karar
 
-Multi-repo ve teknoloji kararları alındı; GitHub hesabı `kemalselimkoc` olarak doğrulandı ve public `gordion-foundation` repository'si oluşturuldu. Sonraki hazırlık, onaylı stack için bağımsız Node.js/npm ve .NET SDK ortamını tamamlamak ve Core/Agent repository'lerini oluşturmaktır. Kaynak lisansı henüz seçilmedi. Yerel klasör adı mevcut dosya ve IDE bağlantılarını korumak için şimdilik `agent-platform-baslangic` olarak bırakıldı; bu klasör adı proje adı değildir.
+Multi-repo ve teknoloji kararları alındı; GitHub hesabı `kemalselimkoc` doğrulandı ve public `gordion-foundation` repository'si oluşturuldu. Node.js/npm ve .NET SDK komut satırı araçları hazır. Sonraki adım `gordion-core` repository'si, TypeScript iskeleti ve OpenAI hesap/bütçe hazırlığıdır; Windows Agent sonrasında gelir. Visual Studio IDE/workload doğrulaması ve kaynak lisansı seçimi açık. Yerel klasör adı mevcut bağlantıları korumak için `agent-platform-baslangic` olarak bırakıldı; bu klasör adı proje adı değildir.
