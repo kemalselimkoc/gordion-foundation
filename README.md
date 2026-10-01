@@ -1,6 +1,8 @@
-# Agent Platform — başlangıç paketi
+# Gordion — başlangıç paketi
 
-Tarih: 1 Ekim 2026 · Durum: multi-repo onaylandı; teknoloji seçimi bekliyor · Geçici çalışma adı.
+Tarih: 1 Ekim 2026 · Durum: Gordion adı, multi-repo düzeni ve başlangıç teknoloji seti onaylandı.
+
+**Created by [@kemalselimkoc](https://github.com/kemalselimkoc)**
 
 ## Amaç
 
@@ -18,10 +20,15 @@ Bu paket çalışır uygulama değildir. İlk geliştirme için incelemeye hazı
 - [Karar kayıtları](docs/decisions.md): henüz kesinleştirilmemiş kararlar.
 - [Günlükten gelen ürün vizyonu](docs/vision.md): asıl motivasyon ve somut kullanım senaryoları.
 - [Geliştirme araçları bağlantısı](docs/integrations.md): Codex, GitHub Desktop, Visual Studio ve VS Code düzeni.
+- [Yazar bilgisi](AUTHORS.md): proje imzası ve kaynak dosyalarında kullanım biçimi.
 
-## Repository kararı ve teknoloji seçenekleri
+## Açık kaynak hedefi ve imza
 
-Kullanıcı baştan ayrı repository'ler kullanılmasını onayladı. Temel/dokümantasyon, AI Core ve Windows Agent ayrı tutulacak; web, cloud, iOS ve diğer ürün repository'leri geliştirme sırası geldiğinde oluşturulacak. Ayrıntılı bölünme repositories.md'de öneridir. Teknoloji kararı açık: TypeScript/Node.js Core + C#/.NET Agent veya Core ve Agent için C#/.NET. İki C# repository kullanmak da multi-repo düzeniyle uyumludur.
+Gordion kullanıcı isteğiyle açık kaynak olarak geliştirilecek. Ana imza `Created by @kemalselimkoc`; README, yazar bilgisi ve önemli özgün kaynak dosyalarında kısa yorum biçiminde kullanılacak. Lisans henüz seçilmedi ve imza teknik bir kopyalama engeli değildir. Kullanıcı secrets, cihaz kimlik bilgileri ve kişisel veriler yayınlanmaz.
+
+## Repository ve teknoloji kararları
+
+Kullanıcı proje adını Gordion olarak belirledi ve baştan ayrı repository'ler kullanılmasını onayladı. AI Core TypeScript/Node.js, Windows Agent C#/.NET ile geliştirilecek. Temel/dokümantasyon, AI Core ve Windows Agent ayrı tutulacak; web, cloud, iOS ve diğer ürün repository'leri geliştirme sırası geldiğinde oluşturulacak. Ayrıntılı bölünme repositories.md'de öneridir. [Teknoloji kararı](docs/adr/002-core-and-agent-stack.md).
 
 ## İlk geliştirme kapsamı
 
@@ -29,8 +36,8 @@ Kullanıcı baştan ayrı repository'ler kullanılmasını onayladı. Temel/dok�
 2. İstenirse kısa, kullanıcı tarafından başlatılan mikrofon kaydı → metne çeviri → aynı Core.
 3. Core → policy/approval → Windows Agent → birkaç izinli işlem → gerçek işlem sonucu.
 
-Gerçek zamanlı ses, wake word, kalıcı hafıza, uzaktan erişim, cloud, iPhone, IoT ve ticari katmanlar aşamalı eklenecek. Model seçimi, kalıcı marka ve hosting sağlayıcısı henüz belirlenmedi.
+Gerçek zamanlı ses, wake word, kalıcı hafıza, uzaktan erişim, cloud, iPhone, IoT ve ticari katmanlar aşamalı eklenecek. OpenAI modeli, görsel marka kimliği ve hosting sağlayıcısı henüz belirlenmedi.
 
 ## Devam için gereken karar
 
-Multi-repo kararı alındı. Teknoloji seçimi açıklama sonrasında yapılacak. İlk temel/dokümantasyon repository'si uygulama dilinden bağımsız başlatılabilir; GitHub push için owner/hesap bilgisi ve erişimi gereklidir. Uygulama repository'leri ve toolchain kurulumu teknoloji seçiminin ardından hazırlanır.
+Multi-repo ve teknoloji kararları alındı; temel/dokümantasyon repository'sinin ilk yerel commit'i mevcut. GitHub push için owner/hesap bilgisi ve erişimi gerekiyor. Sonraki hazırlık, onaylı stack için bağımsız Node.js/npm ve .NET SDK ortamını tamamlamak ve Core/Agent repository'lerini oluşturmaktır. Yerel klasör adı mevcut dosya ve IDE bağlantılarını korumak için şimdilik `agent-platform-baslangic` olarak bırakıldı; bu klasör adı proje adı değildir.

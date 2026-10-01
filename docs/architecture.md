@@ -1,6 +1,6 @@
-# Ana mimari — öneri
+# Gordion — ana mimari
 
-Durum: onay bekleyen taslak. Bileşen sınırları uzun vadeli hedefi gösterir; bugün kurulacak servislerin listesi değildir.
+Durum: multi-repo ve başlangıç teknoloji seti onaylandı; diğer mimari öneriler taslak. Bileşen sınırları uzun vadeli hedefi gösterir; bugün kurulacak servislerin listesi değildir.
 
 ## Yerel başlangıç
 
@@ -72,7 +72,7 @@ Gerçek zamanlı ses için Realtime API sonraki aşama adayıdır; seçilecek mo
 | B — C#/.NET Core + C#/.NET Agent | İlk MVP tek toolchain; Visual Studio düzeniyle uyumlu | Web UI yine ayrı teknoloji; Node tabanlı entegrasyonlar adapter isteyebilir. |
 | C — Python Core + C#/.NET Agent | Python AI araçlarını kullanmak kolay | Ek runtime/dağıtım yükü; başlangıç ihtiyaçları için belirgin zorunluluk yok. |
 
-Öneri A; daha az başlangıç toolchain'i tercih edilirse B güçlü alternatiftir. Kullanıcı karar vermeden açıklama istedi; teknoloji seçilmedi. OpenAI ile konuşmak, tool çağrısı veya voice kullanmak iki seçenekte de mümkün; seçim AI'ın zekâ seviyesini değiştirmez. A, backend/web tarafında JavaScript/TypeScript araçlarını paylaşmayı kolaylaştırır; B, ilk Core ve Agent için aynı dil, IDE ve build düzenini kullanır. İki dilde de süreçler ayrı kalır ve sürümlü protokolle konuşur. Python yardımcı araç olarak ihtiyaçta kullanılabilir. iOS UI framework'ü, cloud dili/veritabanı ve web framework'ü şimdi kesinleştirilmiyor.
+Kabul edilen seçenek A: TypeScript/Node.js AI Core + C#/.NET Windows Agent. Core konuşma ve OpenAI akışını, Agent izinli Windows işlemlerini yönetir; ayrı repository ve süreçlerde sürümlü protokolle konuşurlar. İki toolchain ve çapraz dil sözleşme doğrulaması bu kararın maliyetidir. Yukarıdaki B/C seçenekleri değerlendirilmiş alternatifler olarak korunuyor. Python yardımcı araç olarak ihtiyaçta kullanılabilir. Bu seçim iOS UI framework'ünü, cloud dili/veritabanını veya web framework'ünü kesinleştirmez. Ayrıntı: [ADR-002](adr/002-core-and-agent-stack.md).
 
 Repository düzeni için kullanıcı multi-repo kararını verdi. Bu belge bileşen sınırlarını tarif eder; her kutu için hemen repository veya servis kurulacağı anlamına gelmez.
 

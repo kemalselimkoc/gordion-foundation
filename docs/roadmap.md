@@ -4,7 +4,7 @@ Durum: öneri. Takvim tahmini yerine ölçülebilir aşama çıkışları kullan
 
 | Aşama | Teslim | Geçiş kriteri |
 |---|---|---|
-| 0 — Hazırlık | Ortam, repository/stack onayı, private repo, docs, ilk commit/push | Normal terminal toolchain çalışır; README kurulum yolunu anlatır; GitHub yedeği doğrulanır; gerçek secret yok. |
+| 0 — Hazırlık | Ortam, repository/stack onayı, açık kaynak repo/lisans hazırlığı, docs, ilk commit/push | Normal terminal toolchain çalışır; README kurulum yolunu anlatır; GitHub yedeği doğrulanır; gerçek secret yok. |
 | 1 — Metin çekirdeği | Kullanıcı → yazı → Core → OpenAI → cevap | Türkçe konuşma; aynı oturum bağlamı; timeout, iptal, API hata/429 davranışı; model yapılandırması; kullanım kaydı ve uygulama tarafı bütçe sınırı. |
 | 1b — Basit mikrofon, tercihe bağlı | Push-to-talk kısa kayıt → transcription → Core → yazılı cevap | Mikrofon izni, görünür kayıt, başlat/durdur, anlaşılır transcription hatası; ham kayıt retention kararı. Realtime/wake word gerekmez. |
 | 2 — Yerel Windows Agent | Kimliği doğrulanan yerel IPC, 2–3 typed capability, audit | İzinli işlem gerçek sonuç verir; yasak capability/parametre/path reddedilir; onay gerektiren akış çalışır; standard user yeterlidir. |
