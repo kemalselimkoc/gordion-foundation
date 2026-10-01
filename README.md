@@ -12,6 +12,7 @@ Bu paket çalışır uygulama değildir. İlk geliştirme için kapsam ve kararl
 
 ## Belgeler
 
+- [Adım adım öğrenme ve çalışma rehberi](docs/learning-roadmap.md): nerede olduğumuz, sıradaki tek görev ve birlikte öğrenme planı.
 - [Ortam kontrolü](docs/environment.md): ölçülen durum, doğrulanamayan noktalar ve kurulum sırası.
 - [Geliştirme ortamını kullanma](docs/development-setup.md): kurulu araçlar ve tek terminal başlatıcısı.
 - [Ana mimari](docs/architecture.md): uzun vadeli sınırlar ve MVP akışı.
