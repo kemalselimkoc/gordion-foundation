@@ -31,3 +31,13 @@ Kurulum başarılı olduğunda VS Code yeniden yüklenir/açılır; Codex ikonu 
 ## Güncel sınır
 
 GitHub Desktop/Visual Studio uygulama pencerelerini bu oturumdan kontrol eden native UI API mevcut değil. Bu yüzden menülere tıklanmış, hesapların bağlanmış veya repository'nin uygulamalara eklenmiş olduğu iddia edilmeyecek. Repository oluştuktan sonra kullanıcıya gereken kısa UI adımları verilecek; Git ve eklenti gibi doğrulanabilir işlemler araçlarla yapılacak.
+
+## GitHub CLI kurulumu
+
+Kullanıcının onayıyla resmî GitHub CLI v2.102.0 (30 Eylül 2026 release) taşınabilir paket olarak kuruldu. İndirme kaynağı GitHub'ın `cli/cli` repository'sindeki release asset'idir. ZIP SHA-256 değeri release checksums dosyası ve asset digest'iyle doğrulandı: `ae64e556ecc240b200f7eba60d550e4bb60d78e860e69dd88c449405b86067f4`.
+
+Uygulama klasörüne yazma engeli nedeniyle kalıcı kullanıcı aracı `C:\Users\kemal\Documents\Codex\tools\github-cli\bin\gh.exe` altında tutuluyor. PATH değiştirilmedi; bu oturum tam executable yolunu kullanıyor. Kurulum klasörü platform repository'sinin dışında.
+
+Giriş `gh auth login --hostname github.com --git-protocol https --web` ile başlatıldı. Tek kullanımlık kod, parola ve token bu belgeye kaydedilmez. Kullanıcı tarayıcıda GitHub CLI uygulamasını onayladıktan sonra `gh auth status` ve hesap kimliği kontrol edilir; bundan önce GitHub bağlantısı tamamlandı sayılmaz. CLI auth ile GitHub Desktop auth ayrı oturumlardır.
+
+[Resmî Windows kurulum rehberi](https://github.com/cli/cli/blob/trunk/docs/install_windows.md), [CLI tarayıcı giriş akışı](https://cli.github.com/manual/gh_auth_login).

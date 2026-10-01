@@ -18,7 +18,7 @@
 | Python / py | Komut bulunamadı; standart kullanıcı Python klasörü yok | Başka yere kurulu olma ihtimali dışlanmadı. İlk MVP için zorunlu değil. |
 | FFmpeg / ffprobe | Komut bulunamadı | Ses/video dönüşüm ihtiyacı çıktığında kurulum; ilk metin MVP'si için zorunlu değil. |
 | PowerShell | Codex runtime içinde 7.6.5 | Sistem PATH'inde Windows PowerShell yolu var; normal terminalde PowerShell 7 ayrıca doğrulanmalı. |
-| GitHub CLI | `gh` bulunamadı | GitHub Desktop kullanılabildiği için zorunlu değil. Otomatik repo/PR işlemleri gerektiğinde değerlendirilecek. |
+| GitHub CLI | İlk kontrolde PATH'te yoktu; sonra resmî v2.102.0 taşınabilir paket kuruldu ve çalışması doğrulandı | `C:\Users\kemal\Documents\Codex\tools\github-cli\bin\gh.exe`. Sistem/user PATH değişmedi; tam yolla çağrılıyor. GitHub hesap yetkilendirmesi ayrı adım. |
 | WinGet | Komut bulunamadı; WindowsApps yolu erişim engeline takıldı | Eksik kurulum olarak değerlendirilmedi. |
 | OpenAI ortam değişkenleri | `OPENAI_API_KEY`, project/org değişkenleri process/user/machine kapsamlarında bulunmadı | Bu yalnızca ortam değişkeni kontrolüdür; başka secret depoları incelenmedi. API key değerleri okunmadı/yazdırılmadı. |
 | Proje klasörü | `outputs/` ve `work/`; Git repository yok | Uygulama projesi henüz başlatılmamış. |
