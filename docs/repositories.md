@@ -48,7 +48,7 @@ Başlangıç önerisi: foundation repo'sunda protocol_version, JSON Schema, fixt
 
 ## GitHub düzeni
 
-- Public/açık kaynak yayın hedefi kullanıcı tarafından belirtildi; lisans seçimi açık. Kullanıcı adı `kemalselimkoc`; önerilen owner bu hesaptır, GitHub oturumu ve repo oluşturma erişimi ayrıca doğrulanacak.
+- Public/açık kaynak yayın hedefi kullanıcı tarafından belirtildi; lisans seçimi açık. GitHub hesabı `kemalselimkoc` doğrulandı ve public `kemalselimkoc/gordion-foundation` repository'si oluşturuldu.
 - `main` çalışır ve incelenmiş temel olarak tutulur; anlamlı özellikler `feat/...`, düzeltmeler `fix/...`, belgeler `docs/...` branch'lerinde ilerleyebilir.
 - Commit'ler küçük ve anlamlı: `docs: add platform vision and security draft`, `feat(core): add text conversation flow`, `feat(agent): add allowlisted app launch`.
 - Her commit sonrası otomatik push zorunlu değil; tamamlanmış mantıklı aşamalarda diff/secret kontrolü, commit ve push.
@@ -58,11 +58,11 @@ Başlangıç önerisi: foundation repo'sunda protocol_version, JSON Schema, fixt
 ## İlk commit planı
 
 1. Multi-repo ve teknoloji kararları alındı. Temel/dokümantasyon repo'su bu paket içinde `main` branch'inde başlatıldı.
-2. GitHub owner/oturumu belirlenir; önerilen `gordion-foundation` adına sahip mevcut repo olup olmadığı kontrol edilir.
+2. GitHub owner/oturumu `kemalselimkoc` olarak doğrulandı; `gordion-foundation` adı boş olduğu kontrol edilerek oluşturuldu.
 3. Bu paket temel/dokümantasyon repository'si olarak sürümlenir; onaylanan karar ADR'ye işlendi. Uygulama kaynak klasörleri daha sonra seçilir.
 4. Dokümantasyon için `.gitignore`, `.gitattributes`, `.editorconfig`, SECURITY/CONTRIBUTING eklendi. Uygulama repo'larının ignore/build dosyaları onaylı stack'e göre sonra hazırlanır.
 5. Kimlik kontrolü, staged diff/secret incelemesi ve whitespace kontrolü yapıldı.
 6. İlk yerel commit tamamlandı: `dfdf350` — `docs: initialize platform vision, security and multi-repo roadmap`.
-7. Yayınlanacak kapsam ve lisans netleştirilir; public GitHub repo oluşturulur veya doğrulanmış mevcut remote bağlanır; push yapılır; branch/commit remote üzerinde doğrulanır.
+7. Kullanıcının isteğiyle public GitHub repo oluşturuldu ve `origin` bağlandı. Dokümantasyon commit'leri push edilip yerel/remote SHA eşitliğiyle doğrulanır. Kullanıcı adına lisans seçilmedi; lisans ayrıca kararlaştırılacak.
 
-GitHub Desktop bu iş akışını yapabilir; GitHub CLI zorunlu değildir. İlk yerel repository bu dokümantasyon paketidir; uygulama kaynağı içermez. Yerel klasör adı mevcut bağlantıları korumak için `agent-platform-baslangic` olarak kalıyor; önerilen GitHub repo adı `gordion-foundation`. GitHub owner ve authenticated remote bilinmeden push tamamlandı sayılmayacak.
+GitHub Desktop bu iş akışını yapabilir; GitHub CLI de kuruldu ve yetkilendirildi. İlk yerel repository bu dokümantasyon paketidir; uygulama kaynağı içermez. Yerel klasör adı mevcut bağlantıları korumak için `agent-platform-baslangic` olarak kalıyor. Remote: `https://github.com/kemalselimkoc/gordion-foundation.git`.

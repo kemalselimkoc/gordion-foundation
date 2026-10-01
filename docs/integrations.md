@@ -38,6 +38,8 @@ Kullanıcının onayıyla resmî GitHub CLI v2.102.0 (30 Eylül 2026 release) ta
 
 Uygulama klasörüne yazma engeli nedeniyle kalıcı kullanıcı aracı `C:\Users\kemal\Documents\Codex\tools\github-cli\bin\gh.exe` altında tutuluyor. PATH değiştirilmedi; bu oturum tam executable yolunu kullanıyor. Kurulum klasörü platform repository'sinin dışında.
 
-Giriş `gh auth login --hostname github.com --git-protocol https --web` ile başlatıldı. Tek kullanımlık kod, parola ve token bu belgeye kaydedilmez. Kullanıcı tarayıcıda GitHub CLI uygulamasını onayladıktan sonra `gh auth status` ve hesap kimliği kontrol edilir; bundan önce GitHub bağlantısı tamamlandı sayılmaz. CLI auth ile GitHub Desktop auth ayrı oturumlardır.
+Giriş `gh auth login --hostname github.com --git-protocol https --web` ile tamamlandı. `gh auth status` ve GitHub API hesap sorgusu `kemalselimkoc` hesabını doğruladı. CLI auth ile GitHub Desktop auth ayrı oturumlardır. Tek kullanımlık kod, parola ve token bu belgeye kaydedilmez.
+
+Standart AppData kayıt klasörü bu ortamda erişim hatası verdiği için `GH_CONFIG_DIR`, repository dışında `C:\Users\kemal\Documents\Codex\tools\github-cli-config` olarak kullanılıyor. Windows credential store kullanılamadığından CLI kimlik bilgisini bu klasörde düz metin olarak sakladı. Klasör ve token dosyasının ACL erişimi Windows kullanıcısı, SYSTEM, Administrators ve mevcut Codex ağ işlemi hesabıyla sınırlandı; genel sandbox grup erişimi kaldırıldı. Bu dosya repository'ye eklenmez. Normal Windows ortamında güvenli credential store'a taşıma, kurulumun takip maddesidir.
 
 [Resmî Windows kurulum rehberi](https://github.com/cli/cli/blob/trunk/docs/install_windows.md), [CLI tarayıcı giriş akışı](https://cli.github.com/manual/gh_auth_login).
