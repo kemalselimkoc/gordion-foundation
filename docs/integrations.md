@@ -43,3 +43,11 @@ Giriş `gh auth login --hostname github.com --git-protocol https --web` ile tama
 Standart AppData kayıt klasörü bu ortamda erişim hatası verdiği için `GH_CONFIG_DIR`, repository dışında `C:\Users\kemal\Documents\Codex\tools\github-cli-config` olarak kullanılıyor. Windows credential store kullanılamadığından CLI kimlik bilgisini bu klasörde düz metin olarak sakladı. Klasör ve token dosyasının ACL erişimi Windows kullanıcısı, SYSTEM, Administrators ve mevcut Codex ağ işlemi hesabıyla sınırlandı; genel sandbox grup erişimi kaldırıldı. Bu dosya repository'ye eklenmez. Normal Windows ortamında güvenli credential store'a taşıma, kurulumun takip maddesidir.
 
 [Resmî Windows kurulum rehberi](https://github.com/cli/cli/blob/trunk/docs/install_windows.md), [CLI tarayıcı giriş akışı](https://cli.github.com/manual/gh_auth_login).
+
+## Bağımsız Git ve HTTPS doğrulaması
+
+İlk push sırasında Codex'in paketlediği Git 2.53.0'ın `git-remote-https.exe` sürecinde Windows uygulama hatası görüldü. Kök neden kesinleştirilmedi. Resmî `git-for-windows/git` release'inden MinGit 2.56.0.windows.1 ayrı olarak kuruldu; ZIP SHA-256 değeri GitHub release asset digest'iyle eşleşti: `064b440ff870ed5198527e8f3a92cdf5bd2fd0fedf5e718af95e3fdaddeff718`.
+
+Executable: `C:\Users\kemal\Documents\Codex\tools\mingit\cmd\git.exe`. Bu taşınabilir kurulum Git Bash GUI/installer kurulumu değildir ve PATH'i değiştirmez. HTTPS okuma testi sertifika doğrulaması açık, OpenSSL backend'iyle başarıyla yapıldı; GitHub `main` SHA'sı yerel HEAD ile eşleşti. Bu başarılı test, önceki Windows hatasının tüm koşullarda giderildiğine dair garanti değildir.
+
+Codex işlemleri bu bağımsız Git'i tam yoluyla çağırır. Gönderimde shell tabanlı credential helper yerine yetkili GitHub oturumu yalnızca child process ortamında, ilgili repository URL'sine kısıtlı HTTP authorization başlığı olarak kullanılır; token komut satırına, log'a veya repository dosyalarına yazılmaz.

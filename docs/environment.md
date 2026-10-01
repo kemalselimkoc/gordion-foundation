@@ -7,7 +7,7 @@
 | Bileşen | Gözlem | Anlamı / sonraki işlem |
 |---|---|---|
 | Windows | Build 26300.9550; DisplayVersion 26H2; registry ProductName `Windows 10 Pro` | Kullanıcı Windows 11 bildirdi. Registry'deki eski ürün etiketi tek başına sürüm kararı için kullanılmamalı; Settings/About ile edition teyidi açık. |
-| Git | Codex runtime içinde 2.53.0.windows.3 çalışıyor | Sistem PATH'inde bağımsız Git görünmüyor; standart `C:\Program Files\Git` yolu yok. Normal terminal/GitHub Desktop ortamı ayrıca doğrulanmalı. |
+| Git | Resmî bağımsız MinGit 2.56.0.windows.1 kuruldu; önceki Codex runtime Git'i 2.53.0.windows.3 | `C:\Users\kemal\Documents\Codex\tools\mingit\cmd\git.exe`. Taşınabilir kurulum; sistem/user PATH değiştirilmedi. HTTPS `ls-remote` testi başarılı. |
 | Git kimliği | İsim ve e-posta yapılandırılmış; credential helper `manager` | E-posta rapora kopyalanmadı. GitHub oturumunun açık olduğunu veya push yetkisini kanıtlamaz. |
 | GitHub Desktop | Kullanıcının kurulum bildirimi; kullanıcı klasörü mevcut | Klasör içeriği okunamadı; sürüm ve oturum doğrulanamadı. |
 | Visual Studio | Kullanıcı kurulduğunu bildirdi; `devenv` PATH'te yok | Standart kurulum yollarında ve vswhere kontrolünde doğrulama elde edilemedi. Kurulu değil denemez; IDE sürümü ve workload kontrolü açık. |
