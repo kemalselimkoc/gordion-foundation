@@ -8,7 +8,7 @@ Tarih: 1 Ekim 2026 · Durum: Gordion adı, multi-repo düzeni ve başlangıç te
 
 OpenAI ile doğal yazılı ve sesli iletişim kuran, kullanıcının açıkça yetkilendirdiği bilgisayar ve cihaz işlemlerini gerçekleştiren kişisel agent platformu. İleride ürünleştirilecek araçlar, satış sitesi ve portfolyo aynı ekosistemin parçaları olacak.
 
-Bu paket çalışır uygulama değildir. İlk geliştirme için kapsam ve kararları içerir. Node.js/npm ve .NET SDK kuruldu; TypeScript ve C# derleme kontrolleri geçti. Ürün kodu yazılmadı ve OpenAI isteği gönderilmedi. VS Code'a resmi Codex eklentisi kuruldu ve sürümü doğrulandı; IDE hesap girişi ayrıca tamamlanacak. Temel/dokümantasyon repository'si `main` branch'inde hazırlanmış ve [kemalselimkoc/gordion-foundation](https://github.com/kemalselimkoc/gordion-foundation) GitHub repository'sine bağlanmıştır.
+Bu paket çalışır uygulama değildir. İlk geliştirme için kapsam ve kararları içerir. Node.js/npm ve .NET SDK kuruldu; TypeScript ve C# derleme kontrolleri geçti. İlk metin sohbeti iskeleti ayrı [gordion-core](https://github.com/kemalselimkoc/gordion-core) repository'sinde hazır; 10 yerel test geçti. Henüz gerçek OpenAI isteği gönderilmedi. VS Code'a resmi Codex eklentisi kuruldu ve sürümü doğrulandı; IDE hesap girişi ayrıca tamamlanacak. Temel/dokümantasyon repository'si `main` branch'inde hazırlanmış ve [kemalselimkoc/gordion-foundation](https://github.com/kemalselimkoc/gordion-foundation) GitHub repository'sine bağlanmıştır.
 
 ## Belgeler
 
@@ -41,4 +41,4 @@ Gerçek zamanlı ses, wake word, kalıcı hafıza, uzaktan erişim, cloud, iPhon
 
 ## Devam için gereken karar
 
-Multi-repo ve teknoloji kararları alındı; GitHub hesabı `kemalselimkoc` doğrulandı ve public `gordion-foundation` repository'si oluşturuldu. Node.js/npm ve .NET SDK komut satırı araçları hazır. Sonraki adım `gordion-core` repository'si, TypeScript iskeleti ve OpenAI hesap/bütçe hazırlığıdır; Windows Agent sonrasında gelir. Visual Studio IDE/workload doğrulaması ve kaynak lisansı seçimi açık. Yerel klasör adı mevcut bağlantıları korumak için `agent-platform-baslangic` olarak bırakıldı; bu klasör adı proje adı değildir.
+Multi-repo ve teknoloji kararları alındı; GitHub hesabı `kemalselimkoc` doğrulandı ve public `gordion-foundation` repository'si oluşturuldu. Node.js/npm ve .NET SDK komut satırı araçları hazır. `gordion-core` repository'si ve TypeScript terminal iskeleti hazır. Sonraki adım OpenAI hesap/model/bütçe hazırlığı ve gerçek API doğrulamasıdır; Windows Agent sonrasında gelir. Core CI taslağı mevcut OAuth oturumunda workflow yetkisi olmadığından henüz etkin değildir. Visual Studio IDE/workload doğrulaması ve kaynak lisansı seçimi açık. Yerel klasör adı mevcut bağlantıları korumak için `agent-platform-baslangic` olarak bırakıldı; bu klasör adı proje adı değildir.

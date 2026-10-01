@@ -2,6 +2,8 @@
 
 Durum: öneri. Takvim tahmini yerine ölçülebilir aşama çıkışları kullanılır. Aşama tamamlanmadan sonraki kapsam açılmaz.
 
+1 Ekim 2026 ilerleme: Kullanıcı geliştirme terminalinin çalıştığını doğruladı. Ayrı public [gordion-core](https://github.com/kemalselimkoc/gordion-core) repository'sinde metin CLI, demo modu, Responses adapter, oturum bağlamı, iptal/timeout ve istek/çıktı sınırları hazır; 10 yerel test geçti. Gerçek API testi, model seçimi, para cinsinden bütçe denetimi ve kalıcı kullanım kaydı bekliyor; aşama 1 henüz tamamlanmadı. GitHub CI taslağı workflow yetkisi bekliyor.
+
 | Aşama | Teslim | Geçiş kriteri |
 |---|---|---|
 | 0 — Hazırlık | Ortam, repository/stack onayı, açık kaynak repo/lisans hazırlığı, docs, ilk commit/push | Normal terminal toolchain çalışır; README kurulum yolunu anlatır; GitHub yedeği doğrulanır; gerçek secret yok. |
