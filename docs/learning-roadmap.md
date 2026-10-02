@@ -10,13 +10,16 @@ Güncelleme: 1 Ekim 2026. Bu belge günlük takip içindir; teknik kabul kriterl
 - [x] Node.js, npm, .NET, Git ve GitHub CLI hazır; geliştirme terminalini Kemal doğruladı.
 - [x] Foundation belgeleri ve Core kodu ayrı GitHub repository'lerinde.
 - [x] Core demo, oturum, iptal ve sınırları hazır; 10 test yerelde ve GitHub Windows ortamında geçti.
-- [ ] Kemal demo akışını deneyip temel dosyaları tanıyacak. **Şimdiki görev.**
+- [x] Kemal demoyu çalıştırdı; iki mesajın 1 ve 2 olarak sayıldığı ekran görüntüsüyle doğrulandı.
+- [ ] /usage ve /reset davranışını dene, temel dosyaları tanı. **Şimdiki görev.**
 - [ ] OpenAI model/bütçe seçimi ve gerçek bağlantı testi yapılacak.
 - [ ] Kalıcı kullanım kaydı ve harcama denetimi tamamlanacak.
 
 Henüz çalışan bir Windows kontrolü, sesli asistan veya telefon uygulaması yok. Metin çekirdeğinin iskeleti hazır. Lisans seçimi, Visual Studio workload kontrolü ve GitHub kimlik bilgisini işletim sistemi kasasına taşıma da takip edilecek.
 
 ## Nasıl birlikte çalışacağız?
+
+2 Ekim 2026 notu: Tasarım molası kullanıcı isteğiyle kapatıldı. Gordion platform adı; ana ajan Bora, diğer ajanlar Bilge ve Pars olacak. Renkler sırasıyla mavi, mor ve turuncu olarak onaylandı. Gerçek zamanlı 3D hedefi kaydedildi; motor seçimi ve çoklu ajan uygulaması henüz yapılmadı. Önce metin Core öğrenme akışına dönüyoruz.
 
 Her oturumda tek küçük hedef seçeriz:
 
